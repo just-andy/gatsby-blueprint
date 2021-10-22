@@ -3,13 +3,12 @@
 Built with
 
 - Gatsby v3
-- Styled components
-- CSS
+- Tailwind
 - MDX
 
-## Notes
+## To Do
 
-I have
-- designed products
-- built teams
-and now build products for design teams
+- Fix TSX Types
+- try the file routes api
+- Update hero banner
+- Add mobile navigation

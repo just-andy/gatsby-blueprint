@@ -1,8 +1,7 @@
 {
-    "extends": [
-      "wesbos"
-    ],
+  "extends": [ "wesbos/typescript" ],
     "rules": {
+      "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
       "no-console": 2,
       "prettier/prettier": [
         "error",
@@ -13,5 +12,13 @@
           "tabWidth": 4
         }
       ]
-    }
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["src"],
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      },
+    },
   }
