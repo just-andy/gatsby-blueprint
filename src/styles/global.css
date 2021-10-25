@@ -55,6 +55,17 @@
   }
 }
 
+/* Menu Overlay */
+@layer components {
+  .menu-overlay {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-white justify-center overflow-y-auto z-50;
+  }
+
+  .menu-overlay ul li {
+    @apply relative list-none text-center block;
+  }
+}
+
 /* Buttons */
 
 @layer components {

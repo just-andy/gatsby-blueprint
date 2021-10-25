@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageProps } from 'gatsby';
+import { Link, PageProps } from 'gatsby';
 import HeroBanner from '../components/partials/HeroBanner';
 import Seo from '../components/Seo';
 
@@ -40,13 +40,13 @@ const IndexPage = (props: PageProps) => (
                 fugit maxime nemo commodi nisi sapiente harum asperiores temporibus iure hic alias expedita.
             </p>
 
-            <div className="flex justify-between my-3">
-                <a href="#" className="btn btn-primary">
+            <div className="flex justify-between gap-y-3 flex-col my-3 md:flex-row">
+                <Link to="/" className="btn btn-primary">
                     Primary
-                </a>
-                <a href="#" className="btn btn-secondary">
+                </Link>
+                <Link to="/" className="btn btn-secondary">
                     Secondary
-                </a>
+                </Link>
             </div>
         </section>
     </>

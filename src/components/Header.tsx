@@ -25,30 +25,34 @@ const Header = () => {
     `);
 
     return (
-        <header className="flex justify-between p-4">
-            <Link className="text-3xl md:text-5xl" to="/">
-                Logo
-            </Link>
-            {/** Desktop Navigation */}
-            <nav className="flex items-center justify-end hidden md:block">
-                <ul className="header-nav">
-                    {menuData.site.siteMetadata.menuLinks.map((menu, index) => (
-                        <li key={index} className="mr-4">
-                            <Link to={menu.url} activeClassName="header-nav-active" title={`Go to ${menu.label}`}>
-                                {menu.label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-            {/** Mobile Navigation */}
-            <div className="flex items-center md:hidden">
-                <button onClick={toggleNav} type="button">
-                    {isOpen === true ? 'Close' : 'Menu'}
-                </button>
+        <>
+            <header className="flex justify-between p-4">
+                <Link className="text-3xl md:text-5xl" to="/">
+                    Logo
+                </Link>
+                {/** Desktop Navigation */}
+                <nav className="flex items-center justify-end invisible md:visible">
+                    <ul className="header-nav">
+                        {menuData.site.siteMetadata.menuLinks.map((menu, index) => (
+                            <li key={index} className="mr-4">
+                                <Link to={menu.url} activeClassName="header-nav-active" title={`Go to ${menu.label}`}>
+                                    {menu.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                {/** Mobile Navigation */}
+                <div className="flex items-center md:hidden">
+                    <button onClick={toggleNav} type="button">
+                        {isOpen === true ? 'Close' : 'Menu'}
+                    </button>
+                </div>
+            </header>
+            <div className={isOpen ? `menu-overlay lg:hidden lg:block` : ` hidden h-0  lg:block lg:h-auto `}>
                 <MobileNav value={isOpen} updateNav={toggleNav} menuData={menuData.site.siteMetadata.menuLinks} />
             </div>
-        </header>
+        </>
     );
 };
 

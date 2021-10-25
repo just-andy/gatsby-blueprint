@@ -36,13 +36,13 @@ const HeroBanner = ({ title, filename, link }: Props) => {
 
     // Return
     return (
-        <div className="my-3">
-            <GatsbyImage image={image} alt={`${title} Banner`} />
-            {link && (
-                <a href={link} title="this is a link">
-                    A Link
-                </a>
-            )}
+        <div className="grid">
+            <GatsbyImage className="row-start-1 col-end-2" image={image} alt={`${title} Banner`} />
+
+            <div className="row-span-1 col-span-1 grid relative bg-primary-50">
+                {/* Any content here will be centered in the component */}
+                <h1>Hero text</h1>
+            </div>
         </div>
     );
 };

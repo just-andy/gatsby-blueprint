@@ -14,6 +14,14 @@ module.exports = {
             {
                 label:'About',
                 url:'/about'
+            },
+            {
+                label:'Docs',
+                url:'/docs/example'
+            },
+            {
+                label:'Articles',
+                url:'/articles/guide'
             }
         ],
         social: [
@@ -49,12 +57,25 @@ module.exports = {
                 icon: `src/images/favicon.png`,
             },
         },
-
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `banners`,
                 path: `${__dirname}/src/images/`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `docs`,
+                path: `${__dirname}/src/content/docs/`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `articles`,
+                path: `${__dirname}/src/content/articles/`,
             },
         },
     ],
