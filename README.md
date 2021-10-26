@@ -9,6 +9,5 @@ Built with
 ## To Do
 
 - Fix TSX Types
-- try the file routes api
 - Update hero banner
-- Add mobile navigation
+- Fix mobile navigation

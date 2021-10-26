@@ -9,7 +9,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => (
     <>
         <Header />
-        <main>{children}</main>
+        <main className="my-8">{children}</main>
         <Footer />
     </>
 );

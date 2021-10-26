@@ -47,10 +47,23 @@ module.exports = {
         `gatsby-plugin-image`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-postcss`,
-        `gatsby-plugin-sitemap`,
+        //`gatsby-plugin-sitemap`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
-        `gatsby-plugin-mdx`,
+        `gatsby-remark-images`,
+        {
+          resolve: `gatsby-plugin-mdx`,
+          options: {
+            gatsbyRemarkPlugins: [
+              {
+                resolve: `gatsby-remark-images`,
+                options: {
+                  maxWidth: 1024,
+                },
+              },
+            ],
+          },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
