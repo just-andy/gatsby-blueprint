@@ -10,8 +10,8 @@ const DocsTemplate = ({
         },
     },
 }) => (
-    <section className="flex">
-        <div className="w-full md:w-8/12">
+    <section className="flex flex-wrap overflow-hidden">
+        <div className="w-full overflow-hidden md:w-8/12">
             <h1>{title}</h1>
             <h2>{`Variant - ${variant}`}</h2>
             <ul className="flex mr-3 justify-start">
@@ -22,7 +22,7 @@ const DocsTemplate = ({
                 <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
         </div>
-        <div className="w-full md:w-4/12">
+        <div className="w-full overflow-hidden md:w-4/12">
             <h2>Docs</h2>
         </div>
     </section>
