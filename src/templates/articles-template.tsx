@@ -13,7 +13,7 @@ const DocsTemplate = ({
 }) => (
     <>
         <Seo title={title} description={description} />
-        <section>
+        <section className="prose">
             <h1>{title}</h1>
             <h5>{`Variant - ${variant}`}</h5>
             <ul className="flex mr-3 justify-start">

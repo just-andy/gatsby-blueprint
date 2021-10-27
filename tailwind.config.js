@@ -1,10 +1,10 @@
+const { NONAME } = require('dns');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
     fontFamily: {
       display: ['Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif'],
       body: ['Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif'],
@@ -30,5 +30,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import DocsTemplate from '../../templates/docs-template';
@@ -17,16 +17,7 @@ const MdxPage = ({
         articles: <ArticlesTemplate data={data} />,
     };
 
-    return (
-        <section className="container mx-auto">
-            {templates[variant] ? templates[variant] : null}
-            <div className="block my-5">
-                <Link className="btn btn-primary" to="/">
-                    Back
-                </Link>
-            </div>
-        </section>
-    );
+    return <section className="container mx-auto">{templates[variant] ? templates[variant] : null}</section>;
 };
 
 export const query = graphql`
