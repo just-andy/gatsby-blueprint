@@ -56,11 +56,18 @@ module.exports = {
           options: {
             gatsbyRemarkPlugins: [
               {
+                resolve: "gatsby-remark-embed-video",
+                options: {
+                  containerClass: "embedVideo-container", //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+                },
+              },
+              {
                 resolve: `gatsby-remark-images`,
                 options: {
                   maxWidth: 1024,
                 },
               },
+              `gatsby-remark-prismjs`
             ],
           },
         },
