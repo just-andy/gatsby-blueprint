@@ -1,66 +1,69 @@
 module.exports = {
-  siteMetadata: {
-    title: '<Whitelabel>',
-    titleTemplate: '%s · <Whitelabel>',
-    description:
-      'A portfolio work by Edinburgh based, product designer Andrew Cetnarskyj.',
-    siteUrl: 'https://andrewcetnarskyj.co.uk', // No trailing slash allowed!
-    image: '/images/banner.jpg', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@justandydesign1',
-    menuLinks: [
-      {
-        label: 'home',
-        url: '/'
-      },
-      {
-        label: 'About',
-        url: '/about'
-      },
-      {
-        label: 'Docs',
-        url: '/docs'
-      },
-      {
-        label: 'Articles',
-        url: '/articles'
-      }
-    ],
-    social: [
-      {
-        name: 'twitter',
-        url: 'https://twitter.com/justandydesign1'
-      },
-      {
-        name: 'github',
-        url: 'https://github.com/just-andy'
-      },
-      {
-        name: 'instagram',
-        url: 'https://github.com/just-andy'
-      },
-      {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/andrewcetnarskyj/'
-      }
-    ]
-  },
-  plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-postcss`,
-    //`gatsby-plugin-sitemap`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-remark-images`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-embed-video',
-            options: {
-              containerClass: 'embedVideo-container' //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+    siteMetadata: {
+        title: '<Whitelabel>',
+        titleTemplate: '%s · <Whitelabel>',
+        description: 'A portfolio work by Edinburgh based, product designer Andrew Cetnarskyj.',
+        siteUrl: 'https://andrewcetnarskyj.co.uk', // No trailing slash allowed!
+        image: '/images/banner.jpg', // Path to your image you placed in the 'static' folder
+        twitterUsername: '@justandydesign1',
+        menuLinks:[
+            {
+                label:'home',
+                url:'/'
+            },
+            {
+                label:'Articles',
+                url:'/articles'
+            },
+            {
+                label:'Docs',
+                url:'/docs/example'
             }
+        ],
+        social: [
+            {
+                name: 'twitter',
+                url: 'https://twitter.com/justandydesign1',
+            },
+            {
+                name: 'github',
+                url: 'https://github.com/just-andy',
+            },
+            {
+                name: 'instagram',
+                url: 'https://github.com/just-andy',
+            },
+            {
+                name: 'linkedin',
+                url: 'https://www.linkedin.com/in/andrewcetnarskyj/',
+            },
+        ],
+    },
+    plugins: [
+        `gatsby-plugin-image`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-postcss`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        `gatsby-remark-images`,
+        {
+          resolve: `gatsby-plugin-mdx`,
+          options: {
+            gatsbyRemarkPlugins: [
+              {
+                resolve: "gatsby-remark-embed-video",
+                options: {
+                  containerClass: "embedVideo-container", //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
+                },
+              },
+              {
+                resolve: `gatsby-remark-images`,
+                options: {
+                  maxWidth: 1024,
+                },
+              },
+              `gatsby-remark-prismjs`
+            ],r
           },
           {
             resolve: `gatsby-remark-images`,

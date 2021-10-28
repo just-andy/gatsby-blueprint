@@ -17,7 +17,13 @@ const MobileNav = (props) => {
                 <ul>
                     {props.menuData.map((menu, index) => (
                         <li key={index} className="py-4 w-auto">
-                            <Link to={menu.url} title={menu.label} activeClassName="font-black" className="capitalize">
+                            <Link
+                                to={menu.url}
+                                title={menu.label}
+                                activeClassName="font-black"
+                                className="capitalize"
+                                onClick={updateNav}
+                            >
                                 {menu.label}
                             </Link>
                         </li>
