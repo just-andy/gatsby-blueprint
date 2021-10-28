@@ -30,6 +30,7 @@ const Header = () => {
                 <Link className="text-3xl md:text-5xl" to="/">
                     Logo
                 </Link>
+
                 {/** Desktop Navigation */}
                 <nav className="flex items-center justify-end invisible md:visible">
                     <ul className="header-nav">
@@ -48,10 +49,8 @@ const Header = () => {
                         {isOpen === true ? 'Close' : 'Menu'}
                     </button>
                 </div>
-            </header>
-            <div className={isOpen ? `menu-overlay lg:hidden lg:block` : ` hidden h-0  lg:block lg:h-auto `}>
                 <MobileNav value={isOpen} updateNav={toggleNav} menuData={menuData.site.siteMetadata.menuLinks} />
-            </div>
+            </header>
         </>
     );
 };

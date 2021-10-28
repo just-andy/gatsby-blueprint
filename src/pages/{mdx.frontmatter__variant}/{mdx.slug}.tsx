@@ -21,8 +21,8 @@ const MdxPage = ({
 };
 
 export const query = graphql`
-    query ($id: String) {
-        mdx(id: { eq: $id }) {
+    query ($slug: String) {
+        mdx(slug: { eq: $slug }) {
             frontmatter {
                 title
                 variant

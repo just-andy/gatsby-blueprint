@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
+import { Link } from 'gatsby';
 import Seo from '../components/Seo';
 
 const DocsTemplate = ({
@@ -10,19 +11,24 @@ const DocsTemplate = ({
             body,
         },
     },
-}) => (
+}: any) => (
     <>
         <Seo title={title} description={description} />
-        <section className="prose">
+        <section className="prose mx-auto">
             <h1>{title}</h1>
             <h5>{`Variant - ${variant}`}</h5>
             <ul className="flex mr-3 justify-start">
-                tags
+                <li>Tags</li>
                 {tags ? tags.map((tag, index) => <li key={index}>{tag}</li>) : null}
             </ul>
             <MDXProvider>
                 <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
+            <div className="flex w-full my-3">
+                <Link to="/articles" className="btn btn-primary">
+                    Back to articles
+                </Link>
+            </div>
         </section>
     </>
 );
