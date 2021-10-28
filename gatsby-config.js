@@ -63,35 +63,44 @@ module.exports = {
                 },
               },
               `gatsby-remark-prismjs`
-            ],
+            ],r
           },
-        },
-        {
-            resolve: `gatsby-plugin-manifest`,
+          {
+            resolve: `gatsby-remark-images`,
             options: {
-                icon: `src/images/favicon.png`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `banners`,
-                path: `${__dirname}/src/images/`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `docs`,
-                path: `${__dirname}/src/content/docs/`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `articles`,
-                path: `${__dirname}/src/content/articles/`,
-            },
-        },
-    ],
+              maxWidth: 1024
+            }
+          },
+          `gatsby-remark-prismjs`
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon.png`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `banners`,
+        path: `${__dirname}/src/images/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/src/content/docs/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/content/articles/`
+      }
+    }
+  ]
 };
