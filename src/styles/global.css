@@ -66,6 +66,30 @@
   }
 }
 
+/* Hero Banner */
+@layer components {
+  .hero-banner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: red;
+  }
+  .hero-banner-image {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  .hero-banner-content {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Buttons */
 
 @layer components {
