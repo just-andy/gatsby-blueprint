@@ -1,12 +1,8 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
-interface LayoutProps {
-    children: ReactNode;
-}
-
-const Layout = ({ children }: LayoutProps) => (
+const Layout = ({ children }) => (
     <>
         <Header />
         <main className="my-8">{children}</main>

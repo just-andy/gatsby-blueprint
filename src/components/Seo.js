@@ -2,18 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import path from 'path';
 
-/*
-type Props = {
-    title: string;
-    description: string;
-    image?: string;
-    pathname?: string;
-    article?: boolean;
-}; */
-
-const Seo = ({ title, description, image, pathname, article }: Props) => (
+const Seo = ({ title, description, image, pathname, article }) => (
     <StaticQuery
         query={query}
         render={({
