@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Link, PageProps } from 'gatsby';
+import { Link } from 'gatsby';
 import Seo from '../components/Seo';
 
 // markup
-const NotFoundPage = (props: PageProps) => (
+const NotFoundPage = () => (
     <div className="container">
         <Seo title="Oops we can't find the page" description="It looks like we can't find what you were looking for" />
         <h1>Page not found</h1>

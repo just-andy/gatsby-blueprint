@@ -4,7 +4,7 @@ import HeroBanner from '../components/partials/HeroBanner';
 import Seo from '../components/Seo';
 
 // markup
-const IndexPage = (props: PageProps) => (
+const IndexPage = (props) => (
     <>
         <Seo title="This homepage" description="this is a description" />
         <HeroBanner title="This is a banner" filename="dummy-image" />

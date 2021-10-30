@@ -2,7 +2,6 @@ import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { node } from 'prop-types';
 
 const DocsTemplate = ({
     data: {
@@ -11,7 +10,7 @@ const DocsTemplate = ({
             body,
         },
     },
-}: any) => {
+}) => {
     const sideNav = useStaticQuery(graphql`
         query docsNav {
             allMdx(filter: { frontmatter: { variant: { eq: "docs" } } }) {

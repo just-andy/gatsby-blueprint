@@ -11,7 +11,7 @@ const DocsTemplate = ({
             body,
         },
     },
-}: any) => (
+}) => (
     <>
         <Seo title={title} description={description} />
         <section className="prose mx-auto">
