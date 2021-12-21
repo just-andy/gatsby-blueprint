@@ -2,8 +2,7 @@ const { NONAME } = require('dns');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
       display: ['Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif'],
@@ -12,9 +11,9 @@ module.exports = {
     colors: {
       primary: colors.sky,
       secondary: colors.violet,
-      gray: colors.coolGray,
+      gray: colors.stone,
       white: colors.white,
-      positive: colors.green,
+      positive: colors.emerald,
       negative: colors.red
     },
     container: {
