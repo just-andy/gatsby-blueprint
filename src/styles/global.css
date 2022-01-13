@@ -95,7 +95,7 @@
 @layer components {
   .btn,
   a.btn {
-    @apply font-bold p-4 rounded-md;
+    @apply font-bold p-4 rounded-md inline-block;
   }
 
   .btn-primary,
@@ -106,5 +106,12 @@
   .btn-secondary,
   a.btn-secondary {
     @apply bg-secondary-500 text-white hover:bg-secondary-700 text-gray-50;
+  }
+}
+
+/* Stacked Grid */
+@layer utilities {
+  .c-grid-stacked {
+    grid-area: 1/1;
   }
 }
