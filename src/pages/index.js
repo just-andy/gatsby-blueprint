@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link, PageProps } from 'gatsby';
+import { Link } from 'gatsby';
 import HeroBanner from '../components/partials/HeroBanner';
 import Seo from '../components/Seo';
+import AbstractCard from '../components/partials/AbstractCard';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // markup
 const IndexPage = (props) => (
@@ -47,6 +49,19 @@ const IndexPage = (props) => (
                 <Link to="/" className="btn btn-secondary">
                     Secondary
                 </Link>
+            </div>
+        </section>
+        <section className="container">
+            <header>
+                <h2>This is a header</h2>
+            </header>
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <AbstractCard image={<StaticImage src="../images/ctas/background.png" alt="Image" />} title="This is a title" summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate." />
+                <AbstractCard image={<StaticImage src="../images/ctas/background.png" alt="Image" />} title="This is another title" summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate." />
+                <AbstractCard image={<StaticImage src="../images/ctas/background.png" alt="Image" />} title="This is some title" summary="Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. " />
+                <AbstractCard image={<StaticImage src="../images/ctas/background.png" alt="Image" />} title="This is another title" summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate." />
+                <AbstractCard image={<StaticImage src="../images/ctas/background.png" alt="Image" />} title="This is a title" summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate." />
+                <AbstractCard image={<StaticImage src="../images/ctas/background.png" alt="Image" />} title="This is some title" summary="Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. " />
             </div>
         </section>
     </>
